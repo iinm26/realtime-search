@@ -1,26 +1,26 @@
 .search {
-	overflow: hidden;
-	width: 90%;
-	margin: 0 auto 2em;
-	text-align: center;
-	position: relative;
-	border: 1px solid #888;
-	border-radius: 2px;
-	background: #ffffff;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto 2em;
+  text-align: center;
+  position: relative;
+  border: 1px solid #888;
+  border-radius: 2px;
+  background: #ffffff;
 }
 .search__body {
   width: 100%;
-	padding-right: 1em;
-	cursor: pointer;
-	text-indent: 0.01px;
-	text-overflow: ellipsis;
-	border: none;
-	outline: none;
-	background: transparent;
-	background-image: none;
-	box-shadow: none;
-	-webkit-appearance: none;
-	appearance: none;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
   padding: 8px 40px 8px 8px;
   color: #3a3a3a;
 }
@@ -29,43 +29,43 @@
   overflow: hidden;
   width: 90%;
   height: 30px;
-	margin: 2em auto 1em;
+  margin: 2em auto 1em;
   text-align: center;
   position: relative;
-	border: 1px solid #888;
-	border-radius: 2px;
-	background: #ffffff;
+  border: 1px solid #888;
+  border-radius: 2px;
+  background: #ffffff;
 }
 
 .select-box::before {
   position: absolute;
-	top: 0.8em;
-	right: 0.9em;
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 6px solid #888;
-	pointer-events: none;
+  top: 0.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #888;
+  pointer-events: none;
 }
 
 .select-box__body {
   width: 100%;
-	padding-right: 1em;
-	cursor: pointer;
-	text-indent: 0.01px;
-	text-overflow: ellipsis;
-	border: none;
-	outline: none;
-	background: transparent;
-	background-image: none;
-	box-shadow: none;
-	-webkit-appearance: none;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
   appearance: none;
   padding: 8px 40px 8px 8px;
-	color: #3a3a3a;
+  color: #3a3a3a;
 }
 
 
