@@ -1,46 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-
-class Form extends Component {
-  render() {
-    return (
-      <div className="search">
-        <form>
-          <input
-            type="text"
-            placeholder="キーワードを入力"
-            onChange={(e) => this.props.onChange(e)}
-            className="search__body"
-          />
-        </form>
-      </div>
-    );
-  }
-}
-
-class Select extends Component {
-  render() {
-    let categories = article.map((article) => (
-      <option key={article.id} value={article.category} >
-        {article.category}
-      </option>
-    ));
-
-    return (
-      <div className="select-box">
-        <select
-          value={this.props.value}
-          onChange={(e) => this.props.onChange(e)}
-          className="select-box__body"
-        >
-          <option value="">カテゴリ</option>
-          {categories}
-        </select>
-      </div>
-    );
-  }
-}
-
+import Select from './components/select';
+import Form from './components/form';
+import List from './components/list';
 
 class App extends Component {
   constructor(props) {
@@ -77,16 +39,6 @@ class App extends Component {
   }
 
   render() {
-    let list = this.state.articles.map((articles) => (
-      <li key={articles.id} className="article__list">
-        <span className="article__title">{articles.title}</span>
-        <span className="article__category">{articles.category}</span>
-      </li>
-    ));
-
-    if(!list.length) {
-      list = <li className="article__info">記事は見つかりませんでした</li>
-    }
 
     return (
       <div>
@@ -97,16 +49,16 @@ class App extends Component {
         <Form
           onChange={e => this.handleFilterVal(e)}
         />
-        <ul className="article">
-          {list}
-        </ul>
+        <List
+          articles={this.state.articles}
+        />
       </div>
     );
   }
 }
 
 // 記事のオブジェクトの配列
-let article = [
+export const article = [
   {
     id: 1,
     title: '長く愛せるスターアイテム勢ぞろい!『FENDI(フェンディ)』バッグ▶人気モデルランキングTOP5',
