@@ -2,9 +2,10 @@ import React from 'react';
 import {article} from "../App";
 
 export default function Select(props) {
-  const categories = article.map((article) => (
-    <option key={article.id} value={article.category} >
-      {article.category}
+  const categories = article.reduce((p, x) => (p.indexOf(x.category) !== -1) ? p : [ ...p, x.category ], [])
+  const cateOption = categories.map((category,id) => (
+    <option key={id} value={category} >
+      {category}
     </option>
   ));
 
@@ -16,7 +17,7 @@ export default function Select(props) {
         className="select-box__body"
       >
         <option value="">カテゴリ</option>
-        {categories}
+        {cateOption}
       </select>
     </div>
   );
